@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>@netFal</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>CodeBlock</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>NSLog(@"%@",error.localizedDescription);
+dispatch_async(dispatch_get_main_queue(), ^{
+    
+    if (![NetWorkSingleManage shareManage].isOnline) {
+        [AppTools showAlertMessage:networkErrorOfOutNet controller:nil];
+    }else{
+        if (error) {
+            [AppTools showAlertMessage:error.localizedDescription controller:nil];
+            
+        }else{
+            [AppTools showAlertMessage:networkErrorOfNet controller:nil];
+            
+        }
+        
+    }
+    [tv reloadData];
+    
+    [self stopAnimation];
+    
+});</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>5A4B9EFA-1331-4EA8-86FA-4FFE32E4FF71</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>network unkown</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>network unkown</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

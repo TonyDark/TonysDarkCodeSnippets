@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>@tsi</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>ClassImplementation</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>{
+    
+}
+
+- (void)awakeFromNib {
+    [super awakeFromNib];
+}
+
+- (void)setSelected:(BOOL)selected animated:(BOOL)animated {
+    [super setSelected:selected animated:animated];
+}
+//override
+- (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier{
+    if  ( self =  [super initWithStyle:style reuseIdentifier:reuseIdentifier]) {
+        //[self initData];
+        //[self viewLayoutViews];
+        
+    }
+    return self;
+}
+//override
+- (void)initData{
+    
+    
+}
+
+//override
+- (void)viewLayoutViews{
+    for (UIView * view in self.contentView.subviews) {
+        [view removeFromSuperview];
+        
+    }
+    
+    [self addViews];
+}
+
+//override
+- (void)addViews{
+    
+    
+    //logoIV = [AppTools createImageViewFrame:CGRectZero image:tImg(@"") imgMode:0];
+   // [self.contentView addSubview:logoIV];
+   // Lbl = [UILabel newLabel:CGRectZero backgroundColor:kClearColor text:&lt;#(NSString *)#&gt; textColor:&lt;#(UIColor *)#&gt; font:&lt;#(UIFont *)#&gt; numberOfLines:&lt;#(int)#&gt; adjustsFontSizeToFitWidth:&lt;#(BOOL)#&gt; textAlignment:&lt;#(NSTextAlignment)#&gt;]
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+}
++ (CGFloat)cellHeight:(id)model{
+    if(nil!=model ){
+        
+    }
+    
+    return 0/kUISize;
+}
+////override
+- (void)refresh:(id)obj{
+    [self cellRefresh:obj];
+}
+- (void)cellRefresh:(id)obj{
+    if (nil!= obj) {
+        //        cpny = obj;
+        [self UI];
+    }
+    
+}</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>76DEDCDD-5B59-4760-9ED7-BABE7B270237</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>@tsi</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>UITableViewCell   Self  Implements</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

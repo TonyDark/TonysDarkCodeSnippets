@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>@modal</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>ClassImplementation</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>//    [self presentViewController:&lt;#(nonnull UIViewController *)#&gt; animated:&lt;#(BOOL)#&gt; completion:^{
+    
+//    }];
+    [self dismissViewControllerAnimated:YES completion:^{
+        
+    }];</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>8B486D9A-3822-4C19-9950-E357CC008E7C</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>@modal</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>Modal ViewControl Exchange</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

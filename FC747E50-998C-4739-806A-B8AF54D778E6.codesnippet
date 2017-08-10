@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>@vfi</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>ClassImplementation</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>{
+    id targ;SEL act;
+
+}
+#pragma mark  LifeCycle
+- (instancetype)initWithFrame:(CGRect)frame backgroundColor:(UIColor *)backgroundColor targ:(id)target action:(SEL)action dele:(id)viewDele param:(id)params{
+    if (self = [super initWithFrame:frame]) {
+        self.backgroundColor = backgroundColor;
+    }
+    return self;
+}
+#pragma mark  DataSource
+
+- (void)initData{
+    //    v_ds = [NSMutableArray arrayWithCapacity:1];
+}
+#pragma mark  UI
+- (void)viewLayoutViews{
+    for (UIView *v in self.subviews) {
+       [v removeFromSuperview];
+    }
+    [self addViews];
+}
+
+- (void)addViews{
+    
+    
+}
+
+- (void)reAddViews{
+    
+    
+}
+
+
+- (void)refresh:(id)obj{
+    
+    
+    if (nil!=obj) {
+        
+        
+        
+        //    [self reAddViews];
+        
+    }
+    
+    
+}
+</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>FC747E50-998C-4739-806A-B8AF54D778E6</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetPlatformFamily</key>
+	<string>iphoneos</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>@vfi</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>View Popular  Function Implements</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

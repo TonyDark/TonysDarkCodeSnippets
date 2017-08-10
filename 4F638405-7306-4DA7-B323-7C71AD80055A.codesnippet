@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>@tfdi</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>#pragma mark   textField  dele
+
+- (BOOL)textFieldShouldBeginEditing:(UITextField *)textField{
+    
+    return accountTF.text.length &gt; 8 || pwdTF.text.length &gt; 8 ?NO:YES;
+}
+- (void)textFieldDidBeginEditing:(UITextField *)textField{
+     //logical
+//    [textField becomeFirstResponder];
+}// became first responder
+- (BOOL)textFieldShouldEndEditing:(UITextField *)textField{
+    return YES;
+}
+- (void)textFieldDidEndEditing:(UITextField *)textField{
+    //logical
+}
+- (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string{
+    
+    if ((accountTF.text.length - (accountTF.text.length / 4 - 1))% 4 == 0 &amp;&amp; string.length &gt; 0 &amp;&amp; accountTF.text.length &gt;= 4) {
+        accountTF.text = [accountTF.text stringByAppendingString:@" "];
+    }
+
+    
+    return YES;
+}
+- (BOOL)textFieldShouldClear:(UITextField *)textField{
+    return YES;
+}
+- (BOOL)textFieldShouldReturn:(UITextField *)textField{
+    return YES;
+}
+
+- (void)touchesBegan:(NSSet&lt;UITouch *&gt; *)touches withEvent:(UIEvent *)event{
+    
+}
+
+</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>4F638405-7306-4DA7-B323-7C71AD80055A</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>UITextField  Delegate  Implements</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>UITextField  Delegate  Implements</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

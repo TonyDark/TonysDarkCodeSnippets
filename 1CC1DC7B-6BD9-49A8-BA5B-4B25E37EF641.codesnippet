@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>@tcf</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>CodeBlock</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string> kNSExceptionSolve(
+                      
+                      
+    
+    
+    ,
+                      
+                      
+                      
+    ,
+    
+    
+    
+    );
+</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>1CC1DC7B-6BD9-49A8-BA5B-4B25E37EF641</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>Exception try-catch-finally</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>Exception try-catch-finally</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

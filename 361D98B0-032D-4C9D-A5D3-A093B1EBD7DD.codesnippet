@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>@viewController</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>ClassImplementation</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>
+
+{   UITableView * tableView;
+    NSMutableArray * dataSource;
+    NSInteger pageNum,pageSize;
+    BOOL isLoadMore;
+    
+}
+#pragma mark     liftcycle
+
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+   // [self.navigationController setNavigationBarHidden:NO];
+   // [self.rdv_tabBarController setTabBarHidden:YES animated:NO];
+    
+    self.title = @"";
+    
+}
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    [self initData];
+    [self viewLayoutViews];
+}
+
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+}
+#pragma mark       UI &amp; dataSource
+- (void)initData{
+    dataSource = [NSMutableArray arrayWithCapacity:1];
+    pageNum = 0;
+    pageSize = 10;
+}
+-(void)viewLayoutViews{
+   // [self navigationBar2];
+     [self createTableView];
+}
+//- (void)backAction{
+//
+//}
+//- (void)rightAciton{
+ //
+//}
+- (void)onlineCharge{
+    if ([NetWorkSingleManage shareManage].isOnline) {
+        [self addAnimation];
+        
+    }else{
+         //[self addNoNet];
+        [self stopAnimation];
+        
+    }
+}
+ 
+- (void)addAnimation{
+    
+    dispatch_async(dispatch_get_main_queue(), ^{
+        
+        [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    });
+}
+- (void)stopAnimation{
+    
+    dispatch_async(dispatch_get_main_queue(), ^{
+        
+        [MBProgressHUD hideHUDForView:self.view animated:YES];
+    });
+}
+
+-(void)tableView{
+    UIView * tabFooter = [ProductTools createViewFrame:CGRectMake(0, 0, kScreenWidth, kUIGap/kUISize) backgroundColor:kRColor(245)];
+    
+    tv = [ProductTools crtTv:CGRectMake(0, 0, kScreenWidth, kScreenHeight) style:UITableViewStylePlain showsHorizontalScrollIndicator:0 showsVerticalScrollIndicator:0 dele:self headerView:nil footerView:tabFooter];
+    tv.separatorStyle=UITableViewCellSeparatorStyleSingleLine;
+    tv.separatorInset = UIEdgeInsetsZero;
+    tv.backgroundColor = kRColor(254);
+    [tv setSeparatorColor:kRColor(226)];
+    //    tv.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
+    //
+    //        NSLog(@"********初始化**********");
+    //        [ds removeAllObjects];
+    //[tv reloadData];
+
+    //        [self onlineCharge];
+    //        [tv.mj_header endRefreshing];
+    //
+    //    }];
+    //    [tv.mj_header beginRefreshing];
+    //    tv.mj_footer = [MJRefreshAutoNormalFooter footerWithRefreshingTarget:self refreshingAction:@selector(loadMoreData)];
+    
+ 
+    [self.view addSubview:tv];
+}
+- (void)loadMoreData{
+    
+}
+#pragma mark    ViewFunctionDele
+- (void)pushTo:(id)view controller:(UIViewController *)vc{
+    if (nil!=vc) {
+        [self.navigationController pushViewController:vc animated:YES];
+    }
+    return;
+}
+- (void)modalTo:(id)view controller:(UIViewController *)vc{
+    if (nil!=vc) {
+        [self presentViewController:vc animated:1 completion:nil];
+    }
+    return;
+    
+}
+
+- (void)tableViewReloadByCell:(id)cell controller:(UIViewController *)vc{
+    [tv.mj_header beginRefreshing];
+}
+#pragma mark        tableView dele
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    return nil!=ds&amp;&amp;ds.count &gt;0?ds.count:0;
+    
+}
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
+    return ds.count;
+}
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    return 150/kUISize;
+    
+}
+-(UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    //    MyNeedsCell * cell = [tableView dequeueReusableCellWithIdentifier:MyNeedsCellReuse];;
+    //    [cell UI];
+    //    __weak id weakSelf = self;
+    //    cell.cellDele = weakSelf;
+    //    if (!cell) {
+    //        cell = [[MyNeedsCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:MyNeedsCellReuse];
+    //
+    //    }
+    //    @try {
+    //
+    //        [cell cellRefresh:ds[indexPath.row]];
+    //
+    //    } @catch (NSException *exception) {
+    //
+    //    } @finally {
+    //
+    //    }
+    //    return cell;
+    return nil;
+}
+#pragma mark     download
+
+- (void)download{
+    
+    [NetMannager requestWithUrlString:[NSString stringWithFormat:@"%@%@?pagenum=%ld&amp;pagesize=%ld",httpsBase,myNeedsListUrl,(long)pageNum,(long)pageSize] parms:nil responseType:[SingleManage shareManage].token loadingProgressBlock:nil finishedBlock:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        
+        NSError * error = nil;
+        
+        NSDictionary * dataDic = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingMutableContainers error:&amp;error];
+        [self phrase:dataDic];
+        
+    } failedBlock:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        NSLog(@"%@",error.localizedDescription);
+        dispatch_async(dispatch_get_main_queue(), ^{
+            
+            if (![NetWorkSingleManage shareManage].isOnline) {
+                [ProductTools showAlertMessage:networkErrorOfOutNet controller:nil];
+            }else{
+                if (error) {
+                    [ProductTools showAlertMessage:error.localizedDescription controller:nil];
+                    
+                }else{
+                    [ProductTools showAlertMessage:networkErrorOfNet controller:nil];
+                    
+                }
+                
+            }
+            [tv reloadData];
+            
+            [self stopAnimation];
+            
+        });
+        
+    }];
+    
+}
+
+
+- (void)phrase:(NSDictionary*)dataDic  {
+    
+    if ( nil != dataDic[@"data"] &amp;&amp; [@"200" isEqualToString:dataDic[@"code"]] ) {
+        //
+        //        NeedsListModel * mlMdl = [NeedsListModel mj_objectWithKeyValues:dataDic[@"data"]];
+        //
+        //
+        //        [ds addObjectsFromArray:mlMdl.rows];
+        //        
+        
+        
+    }else{
+        NSLog(@"needsList error");
+    }
+    [tv reloadData];
+
+    [self stopAnimation];
+    
+}
+
+
+</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>361D98B0-032D-4C9D-A5D3-A093B1EBD7DD</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetPlatformFamily</key>
+	<string>iphoneos</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>@viewController</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>UIViewController Popular Functions</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>
