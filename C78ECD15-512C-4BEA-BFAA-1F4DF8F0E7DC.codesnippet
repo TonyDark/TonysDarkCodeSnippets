@@ -11,7 +11,9 @@
 	<key>IDECodeSnippetContents</key>
 	<string>
 #pragma  mark   viewcontroller  lifeCycle
-
+- (void)dealloc{
+    
+}
 - (void)viewDidLoad{
     [super viewDidLoad];
     self.view.backgroundColor = kWhiteColor;
@@ -25,9 +27,7 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
 }
-- (void)dealloc{
-    
-}
+
 #pragma     mark        CreateUI
 - (void)viewDidCreateUI{
     [self viewCreateNavigationBar];

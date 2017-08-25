@@ -9,9 +9,9 @@
 		<string>ClassImplementation</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>#pragma mark  Dele
+	<string>#pragma mark  View_Funtion
 - (void)pushTo:(id)view controller:(UIViewController *)vc{
-    if (vc == nil)return;
+    if (nil==vc)return;
     [self.navigationController pushViewController:vc animated:YES];
     
 }
@@ -23,7 +23,7 @@
 	<key>IDECodeSnippetPlatformFamily</key>
 	<string>iphoneos</string>
 	<key>IDECodeSnippetSummary</key>
-	<string>UIView_FunctionDele  Implement</string>
+	<string>@vdi</string>
 	<key>IDECodeSnippetTitle</key>
 	<string>UIView_FunctionDele  Implement</string>
 	<key>IDECodeSnippetUserSnippet</key>

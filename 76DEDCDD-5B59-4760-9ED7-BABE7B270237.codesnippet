@@ -21,7 +21,7 @@
     [super setSelected:selected animated:animated];
 }
 //override
-- (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier{
+- (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier dele:(id)cellDele target:(id)target action:(SEL)action params:(id)params{
     if  ( self =  [super initWithStyle:style reuseIdentifier:reuseIdentifier]) {
         //[self initData];
         //[self viewLayoutViews];
@@ -89,7 +89,8 @@
 	<key>IDECodeSnippetSummary</key>
 	<string>@tsi</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>UITableViewCell   Self  Implements</string>
+	<string>- (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier dele:(id)cellDele target:(id)target action:(SEL)action params:(id)params{
+</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

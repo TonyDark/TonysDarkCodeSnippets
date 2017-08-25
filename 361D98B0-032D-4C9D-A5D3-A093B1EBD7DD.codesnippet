@@ -19,24 +19,26 @@
 }
 #pragma mark     liftcycle
 
-- (void)viewWillAppear:(BOOL)animated{
-    [super viewWillAppear:animated];
-   // [self.navigationController setNavigationBarHidden:NO];
-   // [self.rdv_tabBarController setTabBarHidden:YES animated:NO];
-    
-    self.title = @"";
-    
-}
-
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self initData];
     [self viewLayoutViews];
 }
-
+- (void)dealloc{
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
 }
+
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    // [self.navigationController setNavigationBarHidden:NO];
+    // [self.rdv_tabBarController setTabBarHidden:YES animated:NO];
+    
+    self.title = @"";
+    
+}
+
 #pragma mark       UI &amp; dataSource
 - (void)initData{
     dataSource = [NSMutableArray arrayWithCapacity:1];
@@ -64,20 +66,6 @@
     }
 }
  
-- (void)addAnimation{
-    
-    dispatch_async(dispatch_get_main_queue(), ^{
-        
-        [MBProgressHUD showHUDAddedTo:self.view animated:YES];
-    });
-}
-- (void)stopAnimation{
-    
-    dispatch_async(dispatch_get_main_queue(), ^{
-        
-        [MBProgressHUD hideHUDForView:self.view animated:YES];
-    });
-}
 
 -(void)tableView{
     UIView * tabFooter = [ProductTools createViewFrame:CGRectMake(0, 0, kScreenWidth, kUIGap/kUISize) backgroundColor:kRColor(245)];
@@ -115,7 +103,6 @@
 }
 - (void)modalTo:(id)view controller:(UIViewController *)vc{
     if (nil!=vc) {
-        [self presentViewController:vc animated:1 completion:nil];
     }
     return;
     
@@ -136,7 +123,7 @@
 }
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     
-    return 150/kUISize;
+    return 0/kUISize;
     
 }
 -(UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -164,59 +151,9 @@
 
 - (void)download{
     
-    [NetMannager requestWithUrlString:[NSString stringWithFormat:@"%@%@?pagenum=%ld&amp;pagesize=%ld",httpsBase,myNeedsListUrl,(long)pageNum,(long)pageSize] parms:nil responseType:[SingleManage shareManage].token loadingProgressBlock:nil finishedBlock:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-        
-        NSError * error = nil;
-        
-        NSDictionary * dataDic = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingMutableContainers error:&amp;error];
-        [self phrase:dataDic];
-        
-    } failedBlock:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-        NSLog(@"%@",error.localizedDescription);
-        dispatch_async(dispatch_get_main_queue(), ^{
-            
-            if (![NetWorkSingleManage shareManage].isOnline) {
-                [ProductTools showAlertMessage:networkErrorOfOutNet controller:nil];
-            }else{
-                if (error) {
-                    [ProductTools showAlertMessage:error.localizedDescription controller:nil];
-                    
-                }else{
-                    [ProductTools showAlertMessage:networkErrorOfNet controller:nil];
-                    
-                }
-                
-            }
-            [tv reloadData];
-            
-            [self stopAnimation];
-            
-        });
-        
-    }];
     
 }
 
-
-- (void)phrase:(NSDictionary*)dataDic  {
-    
-    if ( nil != dataDic[@"data"] &amp;&amp; [@"200" isEqualToString:dataDic[@"code"]] ) {
-        //
-        //        NeedsListModel * mlMdl = [NeedsListModel mj_objectWithKeyValues:dataDic[@"data"]];
-        //
-        //
-        //        [ds addObjectsFromArray:mlMdl.rows];
-        //        
-        
-        
-    }else{
-        NSLog(@"needsList error");
-    }
-    [tv reloadData];
-
-    [self stopAnimation];
-    
-}
 
 
 </string>
