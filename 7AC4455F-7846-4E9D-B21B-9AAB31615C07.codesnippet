@@ -9,14 +9,14 @@
 		<string>ClassInterfaceMethods</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>@property (nonatomic,strong) id   ;
+	<string>@property (nonatomic,strong) &lt;# 自定义注释内容 #&gt;;
 </string>
 	<key>IDECodeSnippetIdentifier</key>
 	<string>7AC4455F-7846-4E9D-B21B-9AAB31615C07</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Objective-C</string>
 	<key>IDECodeSnippetSummary</key>
-	<string>Property Strong Declare</string>
+	<string>@ps</string>
 	<key>IDECodeSnippetTitle</key>
 	<string>Property Strong Declare</string>
 	<key>IDECodeSnippetUserSnippet</key>

@@ -9,7 +9,7 @@
 		<string>ClassInterfaceMethods</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>@property (nonatomic,strong) id&lt;View_FuntionDele&gt;viewDele;
+	<string>@property (nonatomic,weak) id&lt;View_FuntionDele&gt;viewDele;
 </string>
 	<key>IDECodeSnippetIdentifier</key>
 	<string>3AED4BCD-B662-438D-B3B5-79ADF755334D</string>

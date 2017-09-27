@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>@cbtn</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>CodeBlock</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string> UIView * view = [AppTools createViewFrame:CGRectZero backgroundColor:kWhiteColor gesture:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(allSupplier)] isClip:0 radius:0 borderWidth:0 borderColor:nil];
+            UILabel * allTextLbl = [UILabel newLabel:CGRectZero backgroundColor:kClearColor text:@"全部供应商" textColor:k999999Color font:k24Font numberOfLines:1 adjustsFontSizeToFitWidth:0 textAlignment:2];
+            UIImageView * arrowImageView = [AppTools createImageViewFrame:CGRectZero image:tImg(@"rightArrow@3x") imgMode:0];
+
+            [view mas_makeConstraints:^(MASConstraintMaker *make) {
+                make.width.equalTo(@(width));
+                make.top.equalTo(itemLbl.mas_bottom).offset(offsetY);
+                make.left.equalTo(self.mas_left).offset(offsetX);
+                make.height.equalTo(@(84/kUISize));
+            }];
+            [allTextLbl mas_makeConstraints:^(MASConstraintMaker *make) {
+                make.width.equalTo(@(125/kUISize));
+                make.top.bottom.equalTo(view);
+                make.left.equalTo(view.mas_left).offset((width-169/kUISize)/2);
+            }];
+            [arrowImageView mas_makeConstraints:^(MASConstraintMaker *make) {
+                make.width.equalTo(@(44/kUISize));
+                make.left.equalTo(allTextLbl.mas_right);
+                make.centerY.equalTo(view);
+                make.height.equalTo(@(44/kUISize));
+            }];
+</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>077BE936-A6C7-488A-806B-0A6DD84EDB5E</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>@cbtn</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>按钮 +右侧箭头</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

@@ -11,12 +11,11 @@
 	<key>IDECodeSnippetContents</key>
 	<string>
 #pragma  mark   viewcontroller  lifeCycle
-- (void)dealloc{
-    
-}
+- (void)dealloc{}
 - (void)viewDidLoad{
     [super viewDidLoad];
-    self.view.backgroundColor = kWhiteColor;
+    self.view.backgroundColor = kBgColor;
+    [self initData];
     [self viewDidCreateUI];
 }
 
@@ -26,6 +25,10 @@
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
+}
+#pragma     mark        initData
+- (void)initData{
+    
 }
 
 #pragma     mark        CreateUI
@@ -39,8 +42,11 @@
 - (void)viewLayoutUI{
     
 }
+- (void)createTableView{
+    
+}
 
-#pragma   mark     login
+#pragma   mark   download  dataSource
 - (void)request:(NSString *)method url:(NSString *)url param:(NSMutableDictionary *)param header:(NSString *)token{
     if ([NetWorkSingleManage shareManage].isOnline) {
         

@@ -9,14 +9,14 @@
 		<string>ClassInterfaceMethods</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>@property (nonatomic , assign) 
+	<string>@property (nonatomic , assign)&lt;# 自定义注释内容 #&gt; 
 </string>
 	<key>IDECodeSnippetIdentifier</key>
 	<string>F7DF8B78-5BC2-40A2-9977-81BB3FB11345</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Objective-C-Plus-Plus</string>
 	<key>IDECodeSnippetSummary</key>
-	<string>Property  Assign Declare</string>
+	<string>@pa</string>
 	<key>IDECodeSnippetTitle</key>
 	<string>Property  Assign Declare</string>
 	<key>IDECodeSnippetUserSnippet</key>

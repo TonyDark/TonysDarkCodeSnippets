@@ -3,24 +3,21 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>@svd</string>
+	<string>@pcn</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
-		<string>ClassImplementation</string>
+		<string>ClassInterfaceMethods</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>#pragma make ScrollViewDele
-- (void)scrollViewDidScroll:(UIScrollView *)scrollView{
-    
-}</string>
+	<string>@property (nonatomic,copy) NSString *&lt;# 自定义注释内容 #&gt;;</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>4A2EF364-ECCE-41F8-8CB8-CE7CBDD7E2B7</string>
+	<string>41673A15-5E51-465E-BF0F-47A65B97FA54</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Objective-C</string>
 	<key>IDECodeSnippetSummary</key>
-	<string>ScrollViewDelegate</string>
+	<string>@pcn</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>ScrollViewDelegate</string>
+	<string>Property String</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

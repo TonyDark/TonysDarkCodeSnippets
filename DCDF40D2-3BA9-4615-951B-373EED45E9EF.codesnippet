@@ -9,9 +9,14 @@
 		<string>CodeBlock</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>    UIView * lineVw = [AppTools createViewFrame:CGRectZero backgroundColor:kRGBColor(226, 226, 226)];
-    [self addSubview:lineVw];
-</string>
+	<string>UIView * lineVw = [AppTools createViewFrame:CGRectZero backgroundColor:kLineColor];
+[self addSubview:lineVw];
+[lineVw mas_makeConstraints:^(MASConstraintMaker *make) {
+    make.height.equalTo(@(1/kUISizeFit));
+    make.left.equalTo(self.mas_left).offset(30/kUISize);
+    make.right.equalTo(self);
+    make.top.equalTo(self.mas_bottom).offset(-1);
+}];</string>
 	<key>IDECodeSnippetIdentifier</key>
 	<string>DCDF40D2-3BA9-4615-951B-373EED45E9EF</string>
 	<key>IDECodeSnippetLanguage</key>
