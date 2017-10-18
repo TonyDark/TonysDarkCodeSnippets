@@ -89,8 +89,7 @@
 	<key>IDECodeSnippetSummary</key>
 	<string>@tsi</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>- (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier dele:(id)cellDele target:(id)target action:(SEL)action params:(id)params{
-</string>
+	<string>uitableviewcell customfunction</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

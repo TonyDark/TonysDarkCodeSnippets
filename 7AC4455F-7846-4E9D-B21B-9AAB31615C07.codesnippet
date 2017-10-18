@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>@ps</string>
+	<string>@Property Strong</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>ClassInterfaceMethods</string>
@@ -16,7 +16,7 @@
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Objective-C</string>
 	<key>IDECodeSnippetSummary</key>
-	<string>@ps</string>
+	<string>@Property Strong</string>
 	<key>IDECodeSnippetTitle</key>
 	<string>Property Strong Declare</string>
 	<key>IDECodeSnippetUserSnippet</key>
