@@ -6,12 +6,12 @@
 	<string>@cbtn</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
-		<string>CodeBlock</string>
+		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
 	<string> UIView * view = [AppTools createViewFrame:CGRectZero backgroundColor:kWhiteColor gesture:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(allSupplier)] isClip:0 radius:0 borderWidth:0 borderColor:nil];
-            UILabel * allTextLbl = [UILabel newLabel:CGRectZero backgroundColor:kClearColor text:@"全部供应商" textColor:k999999Color font:k24Font numberOfLines:1 adjustsFontSizeToFitWidth:0 textAlignment:2];
-            UIImageView * arrowImageView = [AppTools createImageViewFrame:CGRectZero image:tImg(@"rightArrow@3x") imgMode:0];
+            UILabel * allTextLbl = [UILabel newLabel:CGRectZero backgroundColor:kClearColor text:&lt;# 自定义注释内容 #&gt; textColor:k999999Color font:k24Font numberOfLines:1 adjustsFontSizeToFitWidth:0 textAlignment:2];
+            UIImageView * arrowImageView = [AppTools createImageViewFrame:CGRectZero image:tImg(&lt;# 自定义注释内容 #&gt;) imgMode:0];
 
             [view mas_makeConstraints:^(MASConstraintMaker *make) {
                 make.width.equalTo(@(width));
@@ -38,7 +38,7 @@
 	<key>IDECodeSnippetSummary</key>
 	<string>@cbtn</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>按钮 +右侧箭头</string>
+	<string>按钮 +右侧箭头@cbtn</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

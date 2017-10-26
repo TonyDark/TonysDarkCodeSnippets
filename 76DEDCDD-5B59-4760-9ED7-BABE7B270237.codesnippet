@@ -3,10 +3,10 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>@tsi</string>
+	<string>tsi</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
-		<string>ClassImplementation</string>
+		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
 	<string>{
@@ -87,7 +87,7 @@
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Objective-C</string>
 	<key>IDECodeSnippetSummary</key>
-	<string>@tsi</string>
+	<string>tsi</string>
 	<key>IDECodeSnippetTitle</key>
 	<string>uitableviewcell customfunction</string>
 	<key>IDECodeSnippetUserSnippet</key>

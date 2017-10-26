@@ -3,10 +3,10 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>@line</string>
+	<string>line</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
-		<string>CodeBlock</string>
+		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
 	<string>UIView * lineVw = [AppTools createViewFrame:CGRectZero backgroundColor:kLineColor];
@@ -22,7 +22,7 @@
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Objective-C</string>
 	<key>IDECodeSnippetSummary</key>
-	<string>@line</string>
+	<string>line</string>
 	<key>IDECodeSnippetTitle</key>
 	<string>LineView  </string>
 	<key>IDECodeSnippetUserSnippet</key>

@@ -2,24 +2,24 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>gcdmain</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
-		<string>TopLevel</string>
+		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>@protocol View_FuntionDele &lt;NSObject&gt;
+	<string>dispatch_async(dispatch_get_main_queue(), ^{
 
-- (void)pushTo:(id)view controller:(UIViewController *)vc;
-
-- (void)modalTo:(id)view controller:(UIViewController *)vc;
-
-@end</string>
+});</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>90BE0491-792E-43F6-B3B4-890AA38B6942</string>
+	<string>04402179-D539-480C-B1C4-7840510ECF72</string>
 	<key>IDECodeSnippetLanguage</key>
-	<string>Xcode.SourceCodeLanguage.Objective-C-Plus-Plus</string>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>gcdmain</string>
 	<key>IDECodeSnippetTitle</key>
-	<string></string>
+	<string>gcdmain</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

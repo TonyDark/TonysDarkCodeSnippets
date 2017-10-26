@@ -6,23 +6,10 @@
 	<string>@tcf</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
-		<string>CodeBlock</string>
+		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string> kNSExceptionSolve(
-                      
-                      
-    
-    
-    ,
-                      
-                      
-                      
-    ,
-    
-    
-    
-    );
+	<string> kNSExceptionSolve( &lt;# 自定义注释内容 #&gt;, &lt;# 自定义注释内容 #&gt;, &lt;# 自定义注释内容 #&gt;);
 </string>
 	<key>IDECodeSnippetIdentifier</key>
 	<string>1CC1DC7B-6BD9-49A8-BA5B-4B25E37EF641</string>

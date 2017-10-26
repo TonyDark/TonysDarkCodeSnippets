@@ -3,10 +3,10 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>@vfi</string>
+	<string>vfi</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
-		<string>ClassImplementation</string>
+		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
 	<string>{
@@ -62,10 +62,8 @@
 	<string>FC747E50-998C-4739-806A-B8AF54D778E6</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Objective-C</string>
-	<key>IDECodeSnippetPlatformFamily</key>
-	<string>iphoneos</string>
 	<key>IDECodeSnippetSummary</key>
-	<string>@vfi</string>
+	<string>vfi</string>
 	<key>IDECodeSnippetTitle</key>
 	<string>View Popular  Function Implements</string>
 	<key>IDECodeSnippetUserSnippet</key>

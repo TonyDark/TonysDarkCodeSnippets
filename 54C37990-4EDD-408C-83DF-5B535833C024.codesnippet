@@ -3,13 +3,13 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>@vdi</string>
+	<string>vdi</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
-		<string>ClassImplementation</string>
+		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>#pragma mark  View_Funtion
+	<string>#pragma mark  ====View_Funtion=====
 - (void)pushTo:(id)view controller:(UIViewController *)vc{
     if (nil==vc)return;
     [self.navigationController pushViewController:vc animated:YES];
@@ -20,10 +20,8 @@
 	<string>54C37990-4EDD-408C-83DF-5B535833C024</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Objective-C</string>
-	<key>IDECodeSnippetPlatformFamily</key>
-	<string>iphoneos</string>
 	<key>IDECodeSnippetSummary</key>
-	<string>@vdi</string>
+	<string>vdi</string>
 	<key>IDECodeSnippetTitle</key>
 	<string>UIView_FunctionDele  Implement</string>
 	<key>IDECodeSnippetUserSnippet</key>

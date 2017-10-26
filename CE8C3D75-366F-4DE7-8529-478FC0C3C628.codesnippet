@@ -3,20 +3,20 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>@pragma</string>
+	<string>pragma</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>#pragma mark    ============== &lt;# 自定义注释内容 #&gt; ================
+	<string>#pragma mark    ========&lt;# 自定义注释内容 #&gt; =======
 </string>
 	<key>IDECodeSnippetIdentifier</key>
 	<string>CE8C3D75-366F-4DE7-8529-478FC0C3C628</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Objective-C</string>
 	<key>IDECodeSnippetSummary</key>
-	<string>@pragma</string>
+	<string>pragma</string>
 	<key>IDECodeSnippetTitle</key>
 	<string>pragma mark 区域</string>
 	<key>IDECodeSnippetUserSnippet</key>

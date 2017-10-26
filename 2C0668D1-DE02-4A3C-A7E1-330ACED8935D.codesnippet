@@ -3,10 +3,10 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>@pc</string>
+	<string>pc</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
-		<string>ClassInterfaceMethods</string>
+		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
 	<string>@property (nonatomic , copy) &lt;# 自定义注释内容 #&gt;;
@@ -14,11 +14,11 @@
 	<key>IDECodeSnippetIdentifier</key>
 	<string>2C0668D1-DE02-4A3C-A7E1-330ACED8935D</string>
 	<key>IDECodeSnippetLanguage</key>
-	<string>Xcode.SourceCodeLanguage.Objective-C-Plus-Plus</string>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
 	<key>IDECodeSnippetSummary</key>
-	<string>@pc</string>
+	<string>pc</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>Property copy declare</string>
+	<string>Property copy declare pc</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

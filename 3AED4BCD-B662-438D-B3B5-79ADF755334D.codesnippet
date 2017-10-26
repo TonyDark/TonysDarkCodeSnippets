@@ -6,7 +6,7 @@
 	<string>viewDele</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
-		<string>ClassInterfaceMethods</string>
+		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
 	<string>@property (nonatomic,weak) id&lt;View_FuntionDele&gt;viewDele;
@@ -18,7 +18,7 @@
 	<key>IDECodeSnippetSummary</key>
 	<string>viewDele</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>fast viewDelegate</string>
+	<string>fast viewDelegate   viewDele</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

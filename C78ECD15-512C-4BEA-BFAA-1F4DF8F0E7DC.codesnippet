@@ -6,11 +6,20 @@
 	<string>vclife</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
-		<string>ClassImplementation</string>
+		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
 	<string>
-#pragma  mark   viewcontroller  lifeCycle
+
+{   UITableView *_tableView;
+    NSMutableArray *_dataSource;
+    NSInteger pageNum,pageSize;
+    BOOL isLoadMore;
+    
+}
+
+
+#pragma  mark ====  viewcontroller  lifeCycle===
 - (void)dealloc{}
 - (void)viewDidLoad{
     [super viewDidLoad];
@@ -26,12 +35,22 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
 }
-#pragma     mark        initData
+#pragma     mark ====initData=====
 - (void)initData{
-    
+    dataSource = [NSMutableArray arrayWithCapacity:1];
+    pageNum = 0;
+    pageSize = 10;
 }
 
-#pragma     mark        CreateUI
+
+//- (void)backAction{
+//
+//}
+//- (void)rightAciton{
+//
+//}
+
+#pragma     mark ====CreateUI====
 - (void)viewDidCreateUI{
     [self viewCreateNavigationBar];
     [self viewLayoutUI];
@@ -40,26 +59,99 @@
     
 }
 - (void)viewLayoutUI{
+    [self createTableView];
+
+}
+
+-(void)createTableView{
+    UIView * tabFooter = [ProductTools createViewFrame:CGRectMake(0, 0, kScreenWidth, kUIGap/kUISize) backgroundColor:kRColor(245)];
+    
+    _tableView = [ProductTools crtTv:CGRectMake(0, 0, kScreenWidth, kScreenHeight) style:UITableViewStylePlain showsHorizontalScrollIndicator:0 showsVerticalScrollIndicator:0 dele:self headerView:nil footerView:tabFooter];
+    _tableView.separatorStyle=UITableViewCellSeparatorStyleSingleLine;
+    _tableView.separatorInset = UIEdgeInsetsZero;
+    _tableView.backgroundColor = kRColor(254);
+    [_tableView setSeparatorColor:kRColor(226)];
+    //    tv.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
+    //
+    //        NSLog(@"********初始化**********");
+    //        [ds removeAllObjects];
+    //[tv reloadData];
+    
+    //        [self onlineCharge];
+    //        [tv.mj_header endRefreshing];
+    //
+    //    }];
+    //    [tv.mj_header beginRefreshing];
+    //    tv.mj_footer = [MJRefreshAutoNormalFooter footerWithRefreshingTarget:self refreshingAction:@selector(loadMoreData)];
+    
+    
+    [self.view addSubview:tv];
+}
+
+
+#pragma   mark ====  download  dataSource====
+- (void)loadMoreData{
     
 }
-- (void)createTableView{
+#pragma mark    ViewFunctionDele
+- (void)pushTo:(id)view controller:(UIViewController *)vc{
+    if (nil!=vc) {
+        [self.navigationController pushViewController:vc animated:YES];
+    }
+    return;
+}
+- (void)modalTo:(id)view controller:(UIViewController *)vc{
+    if (nil!=vc) {
+    }
+    return;
     
 }
 
-#pragma   mark   download  dataSource
-- (void)request:(NSString *)method url:(NSString *)url param:(NSMutableDictionary *)param header:(NSString *)token{
-    if ([NetWorkSingleManage shareManage].isOnline) {
-        
-    }else{
-        [AppTools showAlertMessage:networkErrorOfNet controller:self];
-    }
-}</string>
+- (void)tableViewReloadByCell:(id)cell controller:(UIViewController *)vc{
+    [tv.mj_header beginRefreshing];
+}
+#pragma mark        tableView dele
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    return nil!=ds&amp;&amp;ds.count &gt;0?ds.count:0;
+    
+}
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
+    return ds.count;
+}
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    return 0/kUISize;
+    
+}
+-(UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    //    MyNeedsCell * cell = [tableView dequeueReusableCellWithIdentifier:MyNeedsCellReuse];;
+    //    [cell UI];
+    //    __weak id weakSelf = self;
+    //    cell.cellDele = weakSelf;
+    //    if (!cell) {
+    //        cell = [[MyNeedsCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:MyNeedsCellReuse];
+    //
+    //    }
+    //    @try {
+    //
+    //        [cell cellRefresh:ds[indexPath.row]];
+    //
+    //    } @catch (NSException *exception) {
+    //
+    //    } @finally {
+    //
+    //    }
+    //    return cell;
+    return nil;
+}
+
+</string>
 	<key>IDECodeSnippetIdentifier</key>
 	<string>C78ECD15-512C-4BEA-BFAA-1F4DF8F0E7DC</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Objective-C</string>
-	<key>IDECodeSnippetPlatformFamily</key>
-	<string>iphoneos</string>
 	<key>IDECodeSnippetSummary</key>
 	<string>vclife</string>
 	<key>IDECodeSnippetTitle</key>
