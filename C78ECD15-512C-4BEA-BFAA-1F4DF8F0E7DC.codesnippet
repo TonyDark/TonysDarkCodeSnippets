@@ -20,7 +20,10 @@
 
 
 #pragma  mark ====  viewcontroller  lifeCycle===
-- (void)dealloc{}
+- (void)dealloc{
+    _dataSource = nil;
+    _tableView = nil;
+}
 - (void)viewDidLoad{
     [super viewDidLoad];
     self.view.backgroundColor = kBgColor;
@@ -37,7 +40,7 @@
 }
 #pragma     mark ====initData=====
 - (void)initData{
-    dataSource = [NSMutableArray arrayWithCapacity:1];
+    _dataSource = [NSMutableArray arrayWithCapacity:1];
     pageNum = 0;
     pageSize = 10;
 }
@@ -64,28 +67,28 @@
 }
 
 -(void)createTableView{
-    UIView * tabFooter = [ProductTools createViewFrame:CGRectMake(0, 0, kScreenWidth, kUIGap/kUISize) backgroundColor:kRColor(245)];
+    UIView * tabFooter = [AppTools createViewFrame:CGRectMake(0, 0, kScreenWidth, kUIGap/kUISize) backgroundColor:kRColor(245)];
     
-    _tableView = [ProductTools crtTv:CGRectMake(0, 0, kScreenWidth, kScreenHeight) style:UITableViewStylePlain showsHorizontalScrollIndicator:0 showsVerticalScrollIndicator:0 dele:self headerView:nil footerView:tabFooter];
+    _tableView = [AppTools crtTv:CGRectMake(0, 0, kScreenWidth, kScreenHeight) style:UITableViewStylePlain showsHorizontalScrollIndicator:0 showsVerticalScrollIndicator:0 dele:self headerView:nil footerView:tabFooter];
     _tableView.separatorStyle=UITableViewCellSeparatorStyleSingleLine;
     _tableView.separatorInset = UIEdgeInsetsZero;
     _tableView.backgroundColor = kRColor(254);
     [_tableView setSeparatorColor:kRColor(226)];
-    //    tv.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
+    //    _tableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
     //
     //        NSLog(@"********初始化**********");
-    //        [ds removeAllObjects];
-    //[tv reloadData];
+    //        [_dataSource removeAllObjects];
+    //[_tableView reloadData];
     
     //        [self onlineCharge];
-    //        [tv.mj_header endRefreshing];
+    //        [_tableView.mj_header endRefreshing];
     //
     //    }];
-    //    [tv.mj_header beginRefreshing];
-    //    tv.mj_footer = [MJRefreshAutoNormalFooter footerWithRefreshingTarget:self refreshingAction:@selector(loadMoreData)];
+    //    [_tableView.mj_header beginRefreshing];
+    //    _tableView.mj_footer = [MJRefreshAutoNormalFooter footerWithRefreshingTarget:self refreshingAction:@selector(loadMoreData)];
     
     
-    [self.view addSubview:tv];
+    [self.view addSubview:_tableView];
 }
 
 
@@ -108,17 +111,17 @@
 }
 
 - (void)tableViewReloadByCell:(id)cell controller:(UIViewController *)vc{
-    [tv.mj_header beginRefreshing];
+    [_tableView.mj_header beginRefreshing];
 }
 #pragma mark        tableView dele
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return nil!=ds&amp;&amp;ds.count &gt;0?ds.count:0;
+    return nil!=_dataSource&amp;&amp;_dataSource.count &gt;0?_dataSource.count:0;
     
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
-    return ds.count;
+    return _dataSource.count;
 }
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     

@@ -3,21 +3,21 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>psn</string>
+	<string>ps</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>@property (nonatomic,strong) NSNumber *&lt;# 自定义注释内容 #&gt;</string>
+	<string>@property (nonatomic , strong)&lt;# 自定义注释内容 #&gt; &lt;# 自定义注释内容 #&gt;</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>D7A1CD51-4DBC-45DD-8158-D7788EAFF811</string>
+	<string>FE188009-1A42-4FF4-AABA-2486DD00C26A</string>
 	<key>IDECodeSnippetLanguage</key>
-	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<string>Xcode.SourceCodeLanguage.Generic</string>
 	<key>IDECodeSnippetSummary</key>
-	<string>psn</string>
+	<string>ps</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>Property  NSNumber @psn</string>
+	<string>Property Strong declare</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

@@ -3,20 +3,20 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>@pw</string>
+	<string>pw</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>@property (nonatomic,weak) id  ;
+	<string>@property (nonatomic,weak) &lt;# 自定义注释内容 #&gt; &lt;# 自定义注释内容 #&gt;;
 </string>
 	<key>IDECodeSnippetIdentifier</key>
 	<string>CC6D2E12-C6B2-4296-882A-F3B9CBD2CCD8</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Objective-C</string>
 	<key>IDECodeSnippetSummary</key>
-	<string>@pw</string>
+	<string>pw</string>
 	<key>IDECodeSnippetTitle</key>
 	<string>weak property</string>
 	<key>IDECodeSnippetUserSnippet</key>
