@@ -21,7 +21,7 @@
     [super setSelected:selected animated:animated];
 }
 //override
-- (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier dele:(id)cellDele target:(id)target action:(SEL)action params:(id)params{
+- (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier backgroundColor:(UIColor *)backgroundColor dele:(id)cellDele target:(id)target action:(SEL)action params:(id)params{
     if  ( self =  [super initWithStyle:style reuseIdentifier:reuseIdentifier]) {
         //[self initData];
         //[self viewLayoutViews];
